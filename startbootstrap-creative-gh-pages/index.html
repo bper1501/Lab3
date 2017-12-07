@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Vue</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+    <!-- vue script -->
+    <script src="https://unpkg.com/vue"></script>
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">What A Vue!</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Vue.js</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Framework</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex" id="home">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>Vue.js Showcase</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">Vue works as a framework that can link data and the dom together to make components reactive</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#app">Find Out More</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-primary" id="app">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">Example 1</h2>
+            <hr class="light my-4">
+                <div id="app">
+                {{ message }}
+    
+                </div>
+            <p class="text-faded mb-4"> This message can be manipulated from the console with a simple command of app.message = 'new message goes here'</p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">But Wait!, There's More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Example 2</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 mx-auto text-center">
+              <div id="app-2">
+                  <span v-bind:title="message">
+                    Hover your mouse over me for a few seconds
+                    to see my dynamically bound title!
+                  </span>
+                </div>
+              <p class="text-muted mb-0">Vue comes packed with its own attributes which can be integrated to apply special behavior to content</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="bg-primary" id="app">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">More text manipulation</h2>
+            <hr class="light my-4">
+                <div id="app-3">
+                    <span v-if="seen">Now you see me</span>
+                </div>
+            <p class="text-faded mb-4"> Vue uses "v-" attributes called directives.
+            In this example we see a conditional presented in the console that can be changed with a app.seen = false which will make the message disappear</p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#more">Next Please</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="more">
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">More Directives</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 mx-auto text-center">
+              <div id="app-4">
+                  <ol>
+                    <li v-for="todo in todos">
+                      {{ todo.text }}
+                    </li>
+                  </ol>
+               </div>
+              <p class="text-muted mb-0">The v-for directive can be used for displaying a list of items using the data from an Array
+              If we log a app4.todos.push({text: 'new item to be added' }) to the console a new item will be added to the list</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="bg-primary" id="reverse">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">More Reactive Text</h2>
+            <hr class="light my-4">
+                <div id="app-5">
+                  <p>{{ message }}</p>
+                  <button v-on:click="reverseMessage">Reverse Message</button>
+                </div>
+            <p class="text-faded mb-4">Vue also lets you handle user input.The v-on directive to attach event listeners that invoke methods on our Vue instances</p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#type">One hop this time. Reverse. Reverse</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+        <section id="type">
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">More Directives</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 mx-auto text-center">
+              <div id="app-6">
+                  <p>{{ message }}</p>
+                  <input v-model="message">
+              </div>
+              <p class="text-muted mb-0"> The V-model directive makes two way binding between form input and app state much simpler</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="bg-primary" id="components">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">Come Compose Components Calmly Carl</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">The component system is another important concept in Vue. It’s an abstraction that allows us 
+                to build large-scale applications composed of small, self-contained, and potential reusable components</p>
+            <p class="text-faded mb-3"> Components are a Vue instance that has pre-defined options. To create a vue instance we log 
+                <p>"Vue.component('todo-item', { <br>
+                  props: ['todo'], <br>
+                  template: '<"li">{{ todo.text }}<"/li">' <br>
+                }) 
+                </p>
+                prop is a custom attribute<br>
+                This is our parent component <br>
+                <"div id="app-7">
+                 
+                    <br>
+                      Now we provide each todo-item with the todo object
+                      it's representing, so that its content can be dynamic.
+                      We also need to provide each component with a "key",
+                      which will be explained later.<br>
+                     <"ol"><br>
+                    <"todo-item<br>
+                      v-for="item in groceryList"<br>
+                      v-bind:todo="item"<br>
+                      v-bind:key="item.id"><br>
+                    <"/todo-item"><br>
+                  <"/ol"><br>
+                <"/div"><br>
+                
+                NEXT v-bind will allow us to pass 'todo' into each repeated component
+
+
+            </p>    
+            <div id="app-7">
+              <ol>
+                <!--
+                  Now we provide each todo-item with the todo object
+                  it's representing, so that its content can be dynamic.
+                  We also need to provide each component with a "key",
+                  which will be explained later.
+                -->
+                <todo-item
+                  v-for="item in groceryList"
+                  v-bind:todo="item"
+                  v-bind:key="item.id">
+                </todo-item>
+              </ol>
+            </div>
+            
+            <p class="text-faded mb-4">
+
+                    var app7 = new Vue({ <br>
+                      el: '#app-7',
+                      data: { <br>
+                      groceryList: [
+                          { id: 0, text: 'Vegetables' },{ id: 1, text: 'Cheese' },<br>{ id: 2, text: 'Whatever else humans are supposed to eat' } <br>
+                        ]<br>
+                      }<br>
+                    }) <br>
+                    will generate a list without affecting the parent component. Essentially becoming one app broken down in 2 smaller units
+                    this will allow to continue expanding the component 'todo-item' without having to manipulate the parents component</p>
+                
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#home">Thank You, Come Again</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+    
+    <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue!'
+      }
+    })
+    
+    var app2 = new Vue({
+      el: '#app-2',
+      data: {
+        message: 'You loaded this page on ' + new Date().toLocaleString()
+        }
+    })
+    
+    var app3 = new Vue({
+        el: '#app-3',
+        data: {
+        seen: true
+        }
+    })
+    
+    var app4 = new Vue({
+      el: '#app-4',
+      data: {
+        todos: [
+          { text: 'Learn JavaScript' },
+          { text: 'Learn Vue' },
+          { text: 'Build something awesome' }
+        ]
+      }
+    })
+    
+    var app5 = new Vue({
+      el: '#app-5',
+      data: {
+        message: 'Zero Rez'
+      },
+      methods: {
+        reverseMessage: function () {
+          this.message = this.message.split('').reverse().join('')
+        }
+      }
+    })
+    
+    var app6 = new Vue({
+      el: '#app-6',
+      data: {
+        message: 'Hello Vue!'
+      }
+    })
+    
+   
+    
+    Vue.component('todo-item', {
+      props: ['todo'],
+      template: '<li>{{ todo.text }}</li>'
+    })
+
+    var app7 = new Vue({
+      el: '#app-7',
+      data: {
+        groceryList: [
+          { id: 0, text: 'Vegetables' },
+          { id: 1, text: 'Cheese' },
+          { id: 2, text: 'Whatever else humans are supposed to eat' }
+        ]
+      }
+    })
+    
+    
+        </script>
+
+  </body>
+
+</html>
